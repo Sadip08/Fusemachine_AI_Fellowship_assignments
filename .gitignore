@@ -24,7 +24,8 @@ env/
 *.log
 /temp/
 /Week_3/logs/
-
+/assignment/
+/data/
 # Downloaded archives and generated package files
 *.zip
 *.tar.gz
