@@ -1,0 +1,54 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.venv/
+venv/
+env/
+
+# Environment variables and credentials
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+
+# IDE and notebook metadata
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Logs and temporary output
+*.log
+/temp/
+/Week_3/logs/
+
+# Downloaded archives and generated package files
+*.zip
+*.tar.gz
+*.egg-info/
+/assignment/*.pkl
+/week_6/*.pkl
+
+# ML model weights and training checkpoints
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+**/checkpoint-*/
+/week_14_/enc_results/
+/week_14_/Qwen2.5-0.5B-Instruct-router-finetuned/
+
+# Local/raw datasets used by coursework
+/data/cifar-10-python.tar.gz
+/data/cifar-10-batches-py/
+/data/resnet50_cifar10.onnx
+/week_7/data/
+/week_9_deep_learning/NEU-DET/
+
+# OS files
+.DS_Store
+Thumbs.db

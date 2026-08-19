@@ -1,0 +1,13 @@
+# Downloaded coursework dataset
+data/
+
+# Python and notebook-generated files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments and logs
+.env
+venv/
+.venv/
+*.log
