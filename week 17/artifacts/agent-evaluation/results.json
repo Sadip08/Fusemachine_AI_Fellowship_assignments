@@ -1,0 +1,107 @@
+[
+  {
+    "query_id": "Q1",
+    "success": true,
+    "iterations": 3,
+    "tool_calls": 2,
+    "input_tokens": 24,
+    "output_tokens": 124,
+    "total_tokens": 148,
+    "failure_type": "None",
+    "status": "complete",
+    "final_answer": "Based on the retrieved evidence, here is the answer to 'What is the refund policy?':\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\n- Nimbus Cloud stores backups every six hours with a 14-day retention period. Customers can restore any snapshot from the last 14 days through the admin console.\n\n- Offline dashboards are available in read-only mode after the 24-hour sync cache is populated. The mobile app cannot create new tickets while offline, but it can view existing tickets and cached reports.\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "tool_history": [
+      {
+        "iteration": 1,
+        "action": "search_documents",
+        "query": "What is the refund policy?",
+        "status": "success"
+      },
+      {
+        "iteration": 2,
+        "action": "search_documents",
+        "query": "What is the refund policy? 30-day after annual approval.",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "query_id": "Q2",
+    "success": true,
+    "iterations": 2,
+    "tool_calls": 1,
+    "input_tokens": 33,
+    "output_tokens": 137,
+    "total_tokens": 170,
+    "failure_type": "None",
+    "status": "complete",
+    "final_answer": "Based on the retrieved evidence, here is the answer to 'Can the app work offline and create a new support ticket?':\n\n- Offline dashboards are available in read-only mode after the 24-hour sync cache is populated. The mobile app cannot create new tickets while offline, but it can view existing tickets and cached reports.\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\n- The service includes 24/7 support, a 99.9% uptime SLA, and optional regional failover for enterprise accounts. Standard accounts receive email support and premium accounts receive a response time target of under 30 minut\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "tool_history": [
+      {
+        "iteration": 1,
+        "action": "search_documents",
+        "query": "Can the app work offline and create a new support ticket?",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "query_id": "Q3",
+    "success": true,
+    "iterations": 3,
+    "tool_calls": 2,
+    "input_tokens": 24,
+    "output_tokens": 124,
+    "total_tokens": 148,
+    "failure_type": "None",
+    "status": "complete",
+    "final_answer": "Based on the retrieved evidence, here is the answer to 'What is the support setup?':\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\n- Nimbus Cloud stores backups every six hours with a 14-day retention period. Customers can restore any snapshot from the last 14 days through the admin console.\n\n- Offline dashboards are available in read-only mode after the 24-hour sync cache is populated. The mobile app cannot create new tickets while offline, but it can view existing tickets and cached reports.\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "tool_history": [
+      {
+        "iteration": 1,
+        "action": "search_documents",
+        "query": "What is the support setup?",
+        "status": "success"
+      },
+      {
+        "iteration": 2,
+        "action": "search_documents",
+        "query": "What is the support setup? 30-day after annual approval.",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "query_id": "Q4",
+    "success": true,
+    "iterations": 2,
+    "tool_calls": 1,
+    "input_tokens": 30,
+    "output_tokens": 130,
+    "total_tokens": 160,
+    "failure_type": "None",
+    "status": "complete",
+    "final_answer": "Based on the retrieved evidence, here is the answer to 'Compare backup retention and support response targets for premium customers.':\n\n- The service includes 24/7 support, a 99.9% uptime SLA, and optional regional failover for enterprise accounts. Standard accounts receive email support and premium accounts receive a response time target of under 30 minut\n\n- Nimbus Cloud stores backups every six hours with a 14-day retention period. Customers can restore any snapshot from the last 14 days through the admin console.\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "tool_history": [
+      {
+        "iteration": 1,
+        "action": "search_documents",
+        "query": "Compare backup retention and support response targets for premium customers.",
+        "status": "success"
+      }
+    ]
+  },
+  {
+    "query_id": "Q5",
+    "success": false,
+    "iterations": 1,
+    "tool_calls": 0,
+    "input_tokens": 12,
+    "output_tokens": 6,
+    "total_tokens": 18,
+    "failure_type": "Soft failure",
+    "status": "failed",
+    "final_answer": "The search tool failed: tool unavailable.",
+    "tool_history": []
+  }
+]

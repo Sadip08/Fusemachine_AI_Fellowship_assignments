@@ -1,0 +1,223 @@
+[
+  {
+    "query_id": "Q1",
+    "question": "What is the refund policy?",
+    "expected": "simple",
+    "success": true,
+    "status": "complete",
+    "termination_reason": "success",
+    "iterations": 2,
+    "tool_calls": 1,
+    "answer": "Based on the retrieved evidence, here is the answer to 'What is the refund policy?':\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "trace": [
+      {
+        "step": 1,
+        "type": "decision",
+        "decision": {
+          "action": "SEARCH",
+          "query": "What is the refund policy?",
+          "reason": "Initial evidence gathering."
+        },
+        "state": {
+          "evidence_sufficient": false,
+          "missing_information": [],
+          "failure_state": null
+        }
+      },
+      {
+        "step": 1,
+        "type": "tool_call",
+        "tool": "search_documents",
+        "args": {
+          "query": "What is the refund policy?",
+          "top_k": 3
+        },
+        "result": {
+          "status": "ok",
+          "query": "What is the refund policy?",
+          "hits": [
+            {
+              "id": "policy-1",
+              "text": "The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.",
+              "metadata": {
+                "source": "billing-policy"
+              },
+              "score": 0.5
+            }
+          ],
+          "total_hits": 1
+        }
+      },
+      {
+        "step": 2,
+        "type": "decision",
+        "decision": {
+          "action": "FINAL_ANSWER",
+          "reason": "Answer after the first retrieval to minimize latency."
+        },
+        "state": {
+          "evidence_sufficient": false,
+          "missing_information": [
+            "The question is too generic to answer confidently without more specific details.",
+            "Need at least two supporting snippets before answering confidently."
+          ],
+          "failure_state": null
+        }
+      }
+    ]
+  },
+  {
+    "query_id": "Q2",
+    "question": "Can the app work offline and create a new support ticket?",
+    "expected": "needs_more_evidence",
+    "success": true,
+    "status": "complete",
+    "termination_reason": "success",
+    "iterations": 2,
+    "tool_calls": 1,
+    "answer": "Based on the retrieved evidence, here is the answer to 'Can the app work offline and create a new support ticket?':\n\n- Offline dashboards are available in read-only mode after the 24-hour sync cache is populated. The mobile app cannot create new tickets while offline, but it can view existing tickets and cached reports.\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\n- The service includes 24/7 support, a 99.9% uptime SLA, and optional regional failover for enterprise accounts. Standard accounts receive email support and premium accounts receive a response time target of under 30 minut\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "trace": [
+      {
+        "step": 1,
+        "type": "decision",
+        "decision": {
+          "action": "SEARCH",
+          "query": "Can the app work offline and create a new support ticket?",
+          "reason": "Initial evidence gathering."
+        },
+        "state": {
+          "evidence_sufficient": false,
+          "missing_information": [],
+          "failure_state": null
+        }
+      },
+      {
+        "step": 1,
+        "type": "tool_call",
+        "tool": "search_documents",
+        "args": {
+          "query": "Can the app work offline and create a new support ticket?",
+          "top_k": 3
+        },
+        "result": {
+          "status": "ok",
+          "query": "Can the app work offline and create a new support ticket?",
+          "hits": [
+            {
+              "id": "policy-3",
+              "text": "Offline dashboards are available in read-only mode after the 24-hour sync cache is populated. The mobile app cannot create new tickets while offline, but it can view existing tickets and cached reports.",
+              "metadata": {
+                "source": "mobile-support"
+              },
+              "score": 0.5714
+            },
+            {
+              "id": "policy-1",
+              "text": "The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.",
+              "metadata": {
+                "source": "billing-policy"
+              },
+              "score": 0.1429
+            },
+            {
+              "id": "policy-4",
+              "text": "The service includes 24/7 support, a 99.9% uptime SLA, and optional regional failover for enterprise accounts. Standard accounts receive email support and premium accounts receive a response time target of under 30 minutes.",
+              "metadata": {
+                "source": "support-policy"
+              },
+              "score": 0.1429
+            }
+          ],
+          "total_hits": 3
+        }
+      },
+      {
+        "step": 2,
+        "type": "decision",
+        "decision": {
+          "action": "FINAL_ANSWER",
+          "reason": "Evidence is sufficient."
+        },
+        "state": {
+          "evidence_sufficient": true,
+          "missing_information": [],
+          "failure_state": null
+        }
+      }
+    ]
+  },
+  {
+    "query_id": "Q3",
+    "question": "What is the support setup?",
+    "expected": "ambiguous",
+    "success": true,
+    "status": "complete",
+    "termination_reason": "success",
+    "iterations": 2,
+    "tool_calls": 1,
+    "answer": "Based on the retrieved evidence, here is the answer to 'What is the support setup?':\n\n- The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.\n\n- The service includes 24/7 support, a 99.9% uptime SLA, and optional regional failover for enterprise accounts. Standard accounts receive email support and premium accounts receive a response time target of under 30 minut\n\nThis answer is limited to the retrieved evidence and may require additional clarification if the question is ambiguous.",
+    "trace": [
+      {
+        "step": 1,
+        "type": "decision",
+        "decision": {
+          "action": "SEARCH",
+          "query": "What is the support setup?",
+          "reason": "Initial evidence gathering."
+        },
+        "state": {
+          "evidence_sufficient": false,
+          "missing_information": [],
+          "failure_state": null
+        }
+      },
+      {
+        "step": 1,
+        "type": "tool_call",
+        "tool": "search_documents",
+        "args": {
+          "query": "What is the support setup?",
+          "top_k": 3
+        },
+        "result": {
+          "status": "ok",
+          "query": "What is the support setup?",
+          "hits": [
+            {
+              "id": "policy-1",
+              "text": "The service includes a 30-day refund window for annual subscriptions. Refunds are processed within five business days after approval. The support team can review edge cases outside this standard window.",
+              "metadata": {
+                "source": "billing-policy"
+              },
+              "score": 0.5
+            },
+            {
+              "id": "policy-4",
+              "text": "The service includes 24/7 support, a 99.9% uptime SLA, and optional regional failover for enterprise accounts. Standard accounts receive email support and premium accounts receive a response time target of under 30 minutes.",
+              "metadata": {
+                "source": "support-policy"
+              },
+              "score": 0.5
+            }
+          ],
+          "total_hits": 2
+        }
+      },
+      {
+        "step": 2,
+        "type": "decision",
+        "decision": {
+          "action": "FINAL_ANSWER",
+          "reason": "Answer after the first retrieval to minimize latency."
+        },
+        "state": {
+          "evidence_sufficient": false,
+          "missing_information": [
+            "The question is too generic to answer confidently without more specific details."
+          ],
+          "failure_state": null
+        }
+      }
+    ]
+  }
+]

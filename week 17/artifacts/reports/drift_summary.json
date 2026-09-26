@@ -1,0 +1,9 @@
+{
+  "monthly_charges_mean_shift": 33.52759241321007,
+  "churn_rate_shift": 0.007579279412869233,
+  "engineered_drift": [
+    "MonthlyCharges",
+    "Contract"
+  ],
+  "interpretation": "A sustained charge and contract mix shift can reduce calibration and increase false churn decisions; retraining is recommended when this persists."
+}

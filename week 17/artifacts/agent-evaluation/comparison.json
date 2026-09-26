@@ -1,0 +1,20 @@
+[
+  {
+    "version": "prompt_v1",
+    "completion_rate": 0.8,
+    "average_iterations": 1.8,
+    "pct_tests_passed": 0.6
+  },
+  {
+    "version": "prompt_v2",
+    "completion_rate": 0.8,
+    "average_iterations": 2.2,
+    "pct_tests_passed": 1.0
+  },
+  {
+    "version": "prompt_v3",
+    "completion_rate": 0.8,
+    "average_iterations": 2.2,
+    "pct_tests_passed": 1.0
+  }
+]
